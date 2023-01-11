@@ -33,6 +33,9 @@ button{
   border-radius: 2px;
   margin: 05px auto;
 }
-#sorteios{
+#sorteio1, #sorteio2, #sorteios{
   display: none;
+}
+.visivel{
+  display: inline !important;
 }

@@ -7,37 +7,28 @@
   <title>Loteria</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div id="wrapper">
     <div id="main">
       <h1>Gerador de Números</h1>
-      <div id="sorteio1">
+      <div id="sorteio1" class="visivel">
         <label for="qtdSorteios">Quantos sorteios quer fazer?</label>
-        <input type="text" name="qtdSorteios" id="qtdSorteios" placeholder="5"><br>
+        <input type="number" name="qtdSorteios" id="qtdSorteios"><br>
         <label for="numerosSorteio">Quantos números vai ter cada sorteio?</label>
-        <input type="text" name="numerosSorteio" id="numerosSorteio" placeholder="5"><br>
-        <button>Escolher números</button>
+        <input type="number" name="numerosSorteio" id="numerosSorteio"><br>
+        <button id="btn1">Escolher números</button>
       </div>
       <div id="sorteio2">
         <label for="numInput" id="numAtual">Escolha seu 1 número</label>
-        <input type="text" name="numInput" id="numInput" placeholder="5"><br>
-        <button>Outro número</button>
-        <button>Sortear</button>
+        <input type="number" name="numInput" id="numInput"><br>
+        <button id="proxNum">Outro número</button>
+        <button id="sortear">Sortear</button>
+        <p>Números: </p>
+        <p id="numeros"></p>
       </div>
       <div id="sorteios">
-        <div class="sorteio">
-          <div class="headerSorteio">Sorteio 1</div>
-          <p>1  2 3 4 5</p>
-        </div>
-        <div class="sorteio">
-          <div class="headerSorteio">Sorteio 1</div>
-          <p>1  2 3 4 5</p>
-        </div>
-        <div class="sorteio">
-          <div class="headerSorteio">Sorteio 1</div>
-          <p>1  2 3 4 5</p>
-        </div>
       </div>
     </div>
   </div>
