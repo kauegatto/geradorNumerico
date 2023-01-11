@@ -1,0 +1,38 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #6a89cc;
+
+}
+#wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+#main{
+  width: 80%;
+  
+  background-color: #ecf0f1;
+  min-height: 500px;
+  text-align: center;
+}
+input{
+  padding:5px;
+}
+label, input{
+  font-size: 15pt;
+}
+button{
+  margin-top: 10px;
+  padding: 20px;
+}
+.sorteio{
+  width: 80%;
+  border: 1px #000 solid;
+  border-radius: 2px;
+  margin: 05px auto;
+}
+#sorteios{
+  display: none;
+}
