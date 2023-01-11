@@ -30,13 +30,24 @@ btnProxNumero.addEventListener("click", ()=>{
 btnSortear.addEventListener("click", ()=>{
   let intNumerosSorteio = parseInt(numerosSorteio.value); /* copia local p ficar mais fácil*/
   let intQtdSorteios = parseInt(qtdSorteios.value);
+
+  if(numeros.length<parseInt(intNumerosSorteio)){
+    alert("Passe ao menos "+intNumerosSorteio + " números");
+    return;
+  }
+ 
   console.log(intQtdSorteios +" sorteios com " + intNumerosSorteio + " numeros cada")
   for(i=0; i<intQtdSorteios; i++){
     let sorteioAtual = [];
 
     for(j=0; j<intNumerosSorteio; j++){
-      numeroSorteado = Math.floor(Math.random() * numeros.length);
-      sorteioAtual.push(numeros[numeroSorteado]);
+      indexSorteado = Math.floor(Math.random() * numeros.length);
+      numeroSorteado = numeros[indexSorteado];
+      while(sorteioAtual.includes(numeroSorteado)){
+        indexSorteado = Math.floor(Math.random() * numeros.length);
+        numeroSorteado = numeros[indexSorteado];      
+      }
+      sorteioAtual.push(numeroSorteado);
     }
 
     let sorteio = `
